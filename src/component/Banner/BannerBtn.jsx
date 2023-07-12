@@ -1,0 +1,45 @@
+import styled from '@emotion/styled'
+import Image from 'next/image'
+import React from 'react'
+import { PrimaryText } from '../fonts/PrimaryFonts'
+import { BoxRow } from '../Navbar/Navbar'
+
+const SliderBtn = styled(BoxRow)( props => ({
+  position: 'relative',
+  borderRadius: '26px',
+  backgroundColor: '#EA9610',
+  width: 200,
+  height: 50,
+}))
+const PlayBtn = styled(BoxRow)({
+  borderRadius: '50%',
+  backgroundColor: '#fff',
+  width: 38,
+  height: 40,
+  position: 'absolute',
+  right: 7,
+  paddingRight: 5,
+  cursor: 'pointer'
+})
+
+const BtnText = styled.div({
+  backgroundColor: 'transparent',
+  color: '#fff',
+  marginRight: 40,
+})
+
+
+export const BannerBtn = () => {
+  return (
+    <SliderBtn>
+
+    <BtnText>
+      <PrimaryText text={'مشاهده سریال'} weight={600}  size={18}/>
+    </BtnText>
+
+    <PlayBtn>
+      <Image alt='sharp' src='/shape.png' width={14} height={13} />
+    </PlayBtn>
+  </SliderBtn>
+  )
+}
